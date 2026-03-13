@@ -1,36 +1,57 @@
+<div align="center">
+
 # Free Image & Video Toolkit
 
-An AI Agent Skill for image and video processing — **7 free local AI tools** + **cloud AI generation** with 300+ models.
+**7 Free Local AI Tools + 300+ Cloud AI Models — One Skill for All AI Agents**
 
-Works with 15+ AI coding agents: Claude Code, Cursor, OpenAI Codex, GitHub Copilot, Gemini CLI, Windsurf, OpenCode, Kiro, Amp, Goose, and more.
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
+[![uv](https://img.shields.io/badge/uv-package%20manager-blueviolet)](https://docs.astral.sh/uv/)
 
-> **Gold Sponsor**: [Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill) — Unified API for 300+ AI models. SOC I & II Certified | HIPAA Compliant | US-based.
+[English](./README.md) · [中文](./README_zh.md) · [日本語](./README_ja.md) · [한국어](./README_ko.md)
+
+<br>
+
+**Works with 15+ AI coding agents**
+
+Claude Code · Cursor · OpenAI Codex · GitHub Copilot · Gemini CLI · Windsurf · OpenCode · Kiro · Amp · Goose · and more
+
+</div>
+
+<br>
+
+> **Gold Sponsor**: [Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill) — Unified API for 300+ AI models. SOC I & II Certified · HIPAA Compliant · US-based infrastructure.
 
 ---
 
 ## What's Included
 
-### Free Local Tools (No API Key Required)
+### Free Local Tools — No API Key, No Cloud, 100% Offline
 
-All local tools run **100% offline** on your machine. No data leaves your computer.
+All local tools run entirely on your machine. **No data leaves your computer.**
 
-| Tool | Script | Powered By | What It Does |
-|------|--------|-----------|--------------|
-| Image Upscale | `scripts/upscale.py` | Real-ESRGAN | 2x/4x AI super resolution |
-| Face Enhance | `scripts/face-enhance.py` | GFPGAN + CodeFormer | Restore blurry/old photos |
-| Background Remove | `scripts/bg-remove.py` | rembg (U2-Net) | Remove backgrounds → transparent PNG |
-| Object Erase | `scripts/erase.py` | LaMa Inpainting | Erase unwanted objects from images |
-| Face Swap | `scripts/face-swap.py` | InsightFace | Swap faces between images |
-| Smart Segment | `scripts/segment.py` | FastSAM | Segment any object by text/point/box |
-| Media Process | `scripts/media-process.py` | FFmpeg | Convert, compress, trim, merge, GIF |
+| # | Tool | Script | Powered By | What It Does |
+|---|------|--------|-----------|--------------|
+| 1 | **Image Upscale** | `scripts/upscale.py` | Real-ESRGAN | 2x/4x AI super resolution |
+| 2 | **Face Enhance** | `scripts/face-enhance.py` | Real-ESRGAN | Restore blurry/old photos, enhance details |
+| 3 | **Background Remove** | `scripts/bg-remove.py` | rembg (U2-Net) | Remove backgrounds → transparent PNG |
+| 4 | **Object Erase** | `scripts/erase.py` | LaMa Inpainting | Erase unwanted objects seamlessly |
+| 5 | **Face Swap** | `scripts/face-swap.py` | InsightFace | Swap faces between images |
+| 6 | **Smart Segment** | `scripts/segment.py` | FastSAM | Segment any object by text/point/box |
+| 7 | **Media Process** | `scripts/media-process.py` | FFmpeg | Convert, compress, trim, merge, GIF |
 
-### Cloud AI Generation (Atlas Cloud API)
+### Cloud AI Generation — 300+ Models via Atlas Cloud API
 
-Access 300+ state-of-the-art models for AI image and video generation. The script accepts any model ID — use Atlas Cloud MCP tools or API to browse available models.
+| # | Tool | Script | What It Does |
+|---|------|--------|--------------|
+| 8 | **AI Generate** | `scripts/ai-generate.py` | Generate images & videos with any of 300+ cloud AI models |
 
-**Popular models include**: Flux Schnell, Flux Dev, Seedream v5.0, Nano Banana 2, Nano Banana Pro, Imagen4 Ultra, Qwen Image, Wan 2.6, Kling v3.0, Seedance, Vidu, Hailuo, and many more.
+**Popular models**: Flux Schnell · Seedream v5.0 · Nano Banana 2 · Imagen4 Ultra · Wan 2.6 · Kling v3.0 · Seedance · Vidu · Hailuo · and many more
 
-Browse all models: [atlascloud.ai/models](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill)
+```bash
+# Browse all available models and pricing
+uv run scripts/ai-generate.py models
+```
 
 ---
 
@@ -38,22 +59,24 @@ Browse all models: [atlascloud.ai/models](https://www.atlascloud.ai?utm_source=g
 
 ### Prerequisites
 
-- Python 3.10+
-- [uv](https://docs.astral.sh/uv/getting-started/installation/) (`curl -LsSf https://astral.sh/uv/install.sh | sh`)
-- FFmpeg (`brew install ffmpeg` / `apt install ffmpeg`)
+| Requirement | Install |
+|-------------|---------|
+| Python 3.10+ | [python.org](https://python.org) |
+| uv | `curl -LsSf https://astral.sh/uv/install.sh \| sh` |
+| FFmpeg | `brew install ffmpeg` / `apt install ffmpeg` |
 
 ### Installation
 
 ```bash
-# Install as a skill (works with Claude Code, Cursor, Codex, etc.)
+# Option 1: Install as an AI agent skill
 npx skills add ristponex/free-image-video-skill
 
-# Or clone directly
+# Option 2: Clone directly
 git clone https://github.com/ristponex/free-image-video-skill.git
 cd free-image-video-skill
 ```
 
-### For Cloud AI Generation
+### Cloud AI Setup (Optional)
 
 ```bash
 # Set your Atlas Cloud API key
@@ -63,179 +86,162 @@ export ATLAS_CLOUD_API_KEY=your_key_here
 echo 'ATLAS_CLOUD_API_KEY=your_key_here' >> .env
 ```
 
-Get your API key at [atlascloud.ai](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill) — new users get free credits, no credit card required.
+Get your API key at [atlascloud.ai](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill) — new users get **free credits**, no credit card required.
 
 ---
 
-## Usage Examples
+## Usage
 
-### Image Upscale (Real-ESRGAN) — FREE
+All scripts use `uv run` — dependencies are **automatically installed** on first run. Zero setup needed.
+
+<details>
+<summary><b>Image Upscale</b> — 2x/4x AI super resolution (FREE)</summary>
 
 ```bash
-# 4x upscale
-uv run scripts/upscale.py input.jpg
-
-# 2x upscale
-uv run scripts/upscale.py input.jpg --scale 2
-
-# Upscale with face enhancement
-uv run scripts/upscale.py input.jpg --face-enhance
-
-# Batch process a folder
-uv run scripts/upscale.py ./photos/ --scale 4
+uv run scripts/upscale.py input.jpg                   # 4x upscale (default)
+uv run scripts/upscale.py input.jpg --scale 2          # 2x upscale
+uv run scripts/upscale.py input.jpg --face-enhance     # With face enhancement
+uv run scripts/upscale.py ./photos/ --scale 4          # Batch process folder
 ```
+</details>
 
-### Face Enhance (GFPGAN / CodeFormer) — FREE
+<details>
+<summary><b>Face Enhance</b> — Restore old/blurry photos (FREE)</summary>
 
 ```bash
-# GFPGAN (default)
-uv run scripts/face-enhance.py old-photo.jpg
-
-# CodeFormer with fidelity control
-uv run scripts/face-enhance.py old-photo.jpg --method codeformer --fidelity 0.7
-
-# With background upscale
-uv run scripts/face-enhance.py old-photo.jpg --bg-upscale 2
+uv run scripts/face-enhance.py old-photo.jpg                                  # Default enhancement
+uv run scripts/face-enhance.py old-photo.jpg --method codeformer --fidelity 0.7  # CodeFormer
+uv run scripts/face-enhance.py old-photo.jpg --bg-upscale 2                   # With background upscale
 ```
+</details>
 
-### Background Remove (rembg) — FREE
+<details>
+<summary><b>Background Remove</b> — Transparent PNG output (FREE)</summary>
 
 ```bash
-# Remove background
-uv run scripts/bg-remove.py product.jpg
-
-# Fine edges (hair, fur)
-uv run scripts/bg-remove.py portrait.jpg --alpha-matting
-
-# Anime-optimized model
-uv run scripts/bg-remove.py character.png --model isnet-anime
-
-# Batch process
-uv run scripts/bg-remove.py ./products/ -o ./transparent/
+uv run scripts/bg-remove.py product.jpg                        # Remove background
+uv run scripts/bg-remove.py portrait.jpg --alpha-matting        # Fine edges (hair, fur)
+uv run scripts/bg-remove.py character.png --model isnet-anime   # Anime-optimized
+uv run scripts/bg-remove.py ./products/ -o ./transparent/       # Batch process
 ```
+</details>
 
-### Object Erase (LaMa) — FREE
+<details>
+<summary><b>Object Erase</b> — Remove unwanted objects (FREE)</summary>
 
 ```bash
-# Erase with mask
-uv run scripts/erase.py photo.png --mask mask.png
-
-# Erase by coordinates (x,y,w,h)
-uv run scripts/erase.py photo.png --region 100,200,150,150
+uv run scripts/erase.py photo.png --mask mask.png              # Erase with mask
+uv run scripts/erase.py photo.png --region 100,200,150,150     # Erase by coordinates
 ```
+</details>
 
-### Face Swap (InsightFace) — FREE
+<details>
+<summary><b>Face Swap</b> — Swap faces between images (FREE)</summary>
 
 ```bash
-# Swap faces
-uv run scripts/face-swap.py --source face.jpg --target photo.jpg
-
-# Specify which face in group photo
-uv run scripts/face-swap.py --source face.jpg --target group.jpg --face-index 2
+uv run scripts/face-swap.py --source face.jpg --target photo.jpg              # Basic swap
+uv run scripts/face-swap.py --source face.jpg --target group.jpg --face-index 2  # Group photo
 ```
+</details>
 
-### Smart Segment (FastSAM) — FREE
+<details>
+<summary><b>Smart Segment</b> — Segment anything (FREE)</summary>
 
 ```bash
-# Segment by text
-uv run scripts/segment.py image.jpg --text "the dog"
-
-# Segment by point
-uv run scripts/segment.py image.jpg --point 400,300
-
-# Segment everything
-uv run scripts/segment.py image.jpg
+uv run scripts/segment.py image.jpg --text "the dog"    # By text prompt
+uv run scripts/segment.py image.jpg --point 400,300     # By point
+uv run scripts/segment.py image.jpg                     # Segment everything
 ```
+</details>
 
-### Media Process (FFmpeg) — FREE
+<details>
+<summary><b>Media Process</b> — FFmpeg-powered processing (FREE)</summary>
 
 ```bash
-# Convert format
-uv run scripts/media-process.py convert video.mp4 output.webm
-
-# Compress to target size
-uv run scripts/media-process.py compress video.mp4 --target-size 10
-
-# Extract frames
-uv run scripts/media-process.py frames video.mp4 --fps 1
-
-# Create GIF
-uv run scripts/media-process.py gif video.mp4 --start 5 --duration 3
-
-# Trim
+uv run scripts/media-process.py convert video.mp4 output.webm          # Convert format
+uv run scripts/media-process.py compress video.mp4 --target-size 10    # Compress
+uv run scripts/media-process.py frames video.mp4 --fps 1               # Extract frames
+uv run scripts/media-process.py gif video.mp4 --start 5 --duration 3   # Create GIF
 uv run scripts/media-process.py trim video.mp4 --start 00:01:00 --end 00:02:30
-
-# Merge
 uv run scripts/media-process.py merge clip1.mp4 clip2.mp4 -o combined.mp4
-
-# Media info
-uv run scripts/media-process.py info video.mp4
+uv run scripts/media-process.py info video.mp4                         # Media info
 ```
+</details>
 
-### AI Image Generation (Atlas Cloud)
+<details>
+<summary><b>AI Image Generation</b> — 300+ cloud models (Atlas Cloud)</summary>
 
 ```bash
-# Ultra-fast with Flux Schnell ($0.003/image)
-uv run scripts/ai-generate.py image "A cat astronaut on the moon" --model flux-schnell
+# List available models
+uv run scripts/ai-generate.py models --type image
 
-# High quality with Seedream
-uv run scripts/ai-generate.py image "Product photo, studio lighting" --model seedream
+# Generate with full model ID
+uv run scripts/ai-generate.py image "A cat astronaut on the moon" \
+  --model black-forest-labs/flux-schnell --size 1024*1024
 
-# Google Nano Banana
-uv run scripts/ai-generate.py image "Anime character with blue hair" --model nano-banana
+# Google Nano Banana 2 (uses aspect_ratio + resolution)
+uv run scripts/ai-generate.py image "Anime character with blue hair" \
+  --model google/nano-banana-2/text-to-image --aspect-ratio 1:1 --resolution 1k
+
+# ByteDance Seedream v5.0
+uv run scripts/ai-generate.py image "Product photo, studio lighting" \
+  --model bytedance/seedream-v5.0-lite --size 2048*2048
 
 # Edit existing image
-uv run scripts/ai-generate.py image "Make the sky sunset orange" --model seedream-edit --image photo.jpg
-
-# Multiple images
-uv run scripts/ai-generate.py image "Logo design" --model flux-schnell --count 4
-
-# NSFW (disable safety filter)
-uv run scripts/ai-generate.py image "Artistic figure study" --model flux-dev --nsfw
+uv run scripts/ai-generate.py image "Make the sky sunset orange" \
+  --model bytedance/seedream-v5.0-lite/edit --image photo.jpg
 ```
+</details>
 
-### AI Video Generation (Atlas Cloud)
+<details>
+<summary><b>AI Video Generation</b> — Cinema-grade AI video (Atlas Cloud)</summary>
 
 ```bash
-# Cost-effective with Wan 2.6 ($0.070/5s)
-uv run scripts/ai-generate.py video "Cherry blossoms falling in slow motion" --model wan-2.6
+# List available models
+uv run scripts/ai-generate.py models --type video
 
-# Cinema-grade with Kling v3 Pro
-uv run scripts/ai-generate.py video "Drone shot over cyberpunk city at night" --model kling-v3-pro --duration 10
+# Wan 2.6 text-to-video
+uv run scripts/ai-generate.py video "Cherry blossoms falling in slow motion" \
+  --model alibaba/wan-2.6/text-to-video --size 1280*720
+
+# Kling v3.0 Pro (cinema-grade)
+uv run scripts/ai-generate.py video "Drone shot over cyberpunk city at night" \
+  --model kwaivgi/kling-v3.0-pro/text-to-video --duration 10
 
 # Image-to-video
-uv run scripts/ai-generate.py video "She starts walking" --model wan-2.6-i2v --image portrait.jpg
-
-# Anime-style with Vidu
-uv run scripts/ai-generate.py video "Anime sword fight scene" --model vidu-pro
-
-# List all models and pricing
-uv run scripts/ai-generate.py models
+uv run scripts/ai-generate.py video "She starts walking" \
+  --model alibaba/wan-2.6/image-to-video --image portrait.jpg
 ```
+</details>
 
 ---
 
 ## End-to-End Workflows
 
-Combine free local tools with cloud AI for production workflows:
+Combine free local tools with cloud AI for production pipelines:
 
-### E-commerce Product Pipeline
+<details>
+<summary><b>E-commerce Product Pipeline</b></summary>
 
 ```bash
 # 1. Generate product image with AI
-uv run scripts/ai-generate.py image "Minimalist perfume bottle on marble" --model seedream
+uv run scripts/ai-generate.py image "Minimalist perfume bottle on marble" \
+  --model bytedance/seedream-v5.0-lite --size 2048*2048
 
 # 2. Remove background for white-bg listing
-uv run scripts/bg-remove.py ./output/seedream_*.png --alpha-matting
+uv run scripts/bg-remove.py ./output/seedream-v5.0-lite_*.png --alpha-matting
 
 # 3. Upscale to 4K for print
 uv run scripts/upscale.py ./output/*_nobg.png --scale 4
 
 # 4. Generate product video ad
-uv run scripts/ai-generate.py video "A perfume bottle rotating elegantly, soft lighting" --model kling-v3-pro
+uv run scripts/ai-generate.py video "A perfume bottle rotating elegantly" \
+  --model kwaivgi/kling-v3.0-pro/text-to-video --duration 5
 ```
+</details>
 
-### Old Photo Restoration
+<details>
+<summary><b>Old Photo Restoration</b></summary>
 
 ```bash
 # 1. Enhance faces
@@ -247,22 +253,50 @@ uv run scripts/upscale.py ./output/grandpa-1960_enhanced.jpg --scale 4
 # 3. Erase scratches and damage
 uv run scripts/erase.py ./output/grandpa-1960_enhanced_x4.jpg --mask scratches.png
 ```
+</details>
 
-### Content Creation Pipeline
+<details>
+<summary><b>Content Creation Pipeline</b></summary>
 
 ```bash
 # 1. Generate hero image
-uv run scripts/ai-generate.py image "Tech startup landing page hero, abstract" --model nano-banana
+uv run scripts/ai-generate.py image "Tech startup landing page hero" \
+  --model google/nano-banana-2/text-to-image --aspect-ratio 16:9 --resolution 2k
 
 # 2. Segment key elements
-uv run scripts/segment.py ./output/nano-banana_*.png --text "main object" --mask-only
+uv run scripts/segment.py ./output/text-to-image_*.png --text "main object" --mask-only
 
 # 3. Generate promo video
-uv run scripts/ai-generate.py video "Dynamic product reveal with particle effects" --model seedance
+uv run scripts/ai-generate.py video "Dynamic product reveal with particle effects" \
+  --model bytedance/seedance-v1.5-pro/text-to-video
 
 # 4. Create GIF for social media
-uv run scripts/media-process.py gif ./output/seedance_*.mp4 --fps 15 --width 480
+uv run scripts/media-process.py gif ./output/text-to-video_*.mp4 --fps 15 --width 480
 ```
+</details>
+
+---
+
+## Pricing
+
+### Free Local Tools — $0
+
+All 7 local tools are completely **free and open source**. Run them as much as you want.
+
+### Cloud AI Generation — Pay Per Use
+
+| Model | Atlas Cloud | fal.ai | Official API | You Save |
+|-------|-------------|--------|--------------|----------|
+| Flux Schnell | **$0.003**/image | $0.025/image | N/A | **88%** |
+| Seedream v5.0 | **$0.032**/image | N/A | N/A | Exclusive |
+| Nano Banana 2 | **$0.072**/image | N/A | $0.08/image | 10% |
+| Imagen4 Ultra | **$0.054**/image | N/A | $0.06/image | 10% |
+| Wan 2.6 (5s) | **$0.070**/5s | $0.50/5s | N/A | **86%** |
+| Kling v3.0 Pro (5s) | **$0.204**/5s | N/A | $0.70/5s | **71%** |
+
+> Prices shown are base prices with current promotions. Final price may vary by resolution, duration, etc.
+
+New users get **free credits** on signup — [Get your API key →](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill)
 
 ---
 
@@ -270,51 +304,32 @@ uv run scripts/media-process.py gif ./output/seedance_*.mp4 --fps 15 --width 480
 
 Models are downloaded automatically on first use and cached locally:
 
-| Tool | Model | Size | Cache Path |
-|------|-------|------|------------|
-| Upscale | RealESRGAN_x4plus | ~64 MB | `~/.cache/realesrgan/` |
-| Face Enhance | GFPGANv1.4 | ~348 MB | `~/.cache/gfpgan/` |
-| Face Enhance | CodeFormer | ~376 MB | `~/.cache/codeformer/` |
-| Background Remove | U2-Net | ~176 MB | `~/.u2net/` |
-| Object Erase | LaMa | ~200 MB | `~/.cache/lama/` |
-| Face Swap | buffalo_l + inswapper | ~500 MB | `~/.insightface/` |
-| Smart Segment | FastSAM-s | ~23 MB | auto by ultralytics |
+| Tool | Model | Size |
+|------|-------|------|
+| Upscale | RealESRGAN_x4plus | ~64 MB |
+| Face Enhance | Real-ESRGAN (NCNN) | ~64 MB |
+| Background Remove | U2-Net | ~176 MB |
+| Object Erase | LaMa | ~200 MB |
+| Face Swap | buffalo_l + inswapper | ~500 MB |
+| Smart Segment | FastSAM-s | ~23 MB |
 
-Total first-run download: ~1.5 GB. All subsequent runs are instant.
+> Total first-run download: ~1 GB. All subsequent runs are instant.
 
 ---
 
 ## Tips
 
-- **GPU Acceleration**: Tools auto-detect CUDA (NVIDIA) and MPS (Apple Silicon), falling back to CPU
-- **Batch Processing**: Most tools accept a folder path for batch processing
-- **Memory**: Face swap and segmentation need 4GB+ RAM for large images
-- **First Run**: First execution downloads AI models — be patient, subsequent runs are instant
-- **Zero Setup**: All Python dependencies are handled by `uv run` — no pip install needed
-
----
-
-## Agent Skill Integration
-
-Install as a skill for any AI coding agent:
-
-```bash
-npx skills add ristponex/free-image-video-skill
-```
-
-Compatible with: Claude Code, Cursor, OpenAI Codex, GitHub Copilot, Gemini CLI, Windsurf, OpenCode, Kiro, Amp, Goose, Kilo Code, and more.
+- **GPU Acceleration** — Auto-detects CUDA (NVIDIA) and MPS (Apple Silicon), falls back to CPU
+- **Batch Processing** — Most tools accept a folder path for batch processing
+- **Memory** — Face swap and segmentation need 4GB+ RAM for large images
+- **Zero Setup** — All dependencies handled by `uv run`, no pip install needed
 
 ---
 
 ## Atlas Cloud API Reference
 
-### Authentication
-
-```bash
-export ATLAS_CLOUD_API_KEY=your_key_here
-```
-
-### Image Generation API
+<details>
+<summary><b>Image Generation API</b></summary>
 
 ```bash
 curl -X POST "https://api.atlascloud.ai/api/v1/model/generateImage" \
@@ -323,12 +338,13 @@ curl -X POST "https://api.atlascloud.ai/api/v1/model/generateImage" \
   -d '{
     "model": "black-forest-labs/flux-schnell",
     "prompt": "A serene Japanese garden with cherry blossoms",
-    "size": "1024*1024",
-    "num_images": 1
+    "size": "1024*1024"
   }'
 ```
+</details>
 
-### Video Generation API
+<details>
+<summary><b>Video Generation API</b></summary>
 
 ```bash
 curl -X POST "https://api.atlascloud.ai/api/v1/model/generateVideo" \
@@ -341,15 +357,19 @@ curl -X POST "https://api.atlascloud.ai/api/v1/model/generateVideo" \
     "duration": 5
   }'
 ```
+</details>
 
-### Poll for Result
+<details>
+<summary><b>Poll for Result</b></summary>
 
 ```bash
 curl -X GET "https://api.atlascloud.ai/api/v1/model/result/{request_id}" \
   -H "Authorization: Bearer $ATLAS_CLOUD_API_KEY"
 ```
+</details>
 
-### Python Integration
+<details>
+<summary><b>Python Integration</b></summary>
 
 ```python
 import requests, time, os
@@ -375,28 +395,7 @@ while True:
         break
     time.sleep(3)
 ```
-
----
-
-## Pricing
-
-### Free Local Tools — $0
-
-All 7 local tools are completely free and open source. Run them as much as you want.
-
-### Cloud AI Generation — Pay Per Use
-
-| Category | Model | Starting Price |
-|----------|-------|---------------|
-| Image | Flux Schnell | $0.003/image |
-| Image | Nano Banana 2 | $0.020/image |
-| Image | Seedream v5.0 | $0.032/image |
-| Video | Wan 2.6 | $0.014/s |
-| Video | Vidu Q3 Turbo | $0.007/s |
-| Video | Seedance v1 Pro | $0.044/s |
-| Video | Kling v3.0 Pro | $0.042/s |
-
-New users get free credits on signup. [Get your API key →](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill)
+</details>
 
 ---
 
@@ -406,22 +405,18 @@ MIT License. See [LICENSE](./LICENSE) for details.
 
 ---
 
-## Acknowledgments
+<div align="center">
 
 ### Gold Sponsor
 
-**[Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill)** — Unified API for 300+ AI models. Enterprise-grade infrastructure with SOC I & II certification and HIPAA compliance.
+**[Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill)** — Unified API for 300+ AI models
 
-### Open Source Projects
+SOC I & II Certified · HIPAA Compliant · US-based Infrastructure
 
-This toolkit builds on these incredible open-source projects:
+<br>
 
-- [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN) — Image super resolution
-- [GFPGAN](https://github.com/TencentARC/GFPGAN) — Face restoration
-- [CodeFormer](https://github.com/sczhou/CodeFormer) — Face restoration with controllable fidelity
-- [rembg](https://github.com/danielgatis/rembg) — Background removal
-- [LaMa](https://github.com/advimman/lama) — Large mask inpainting
-- [InsightFace](https://github.com/deepinsight/insightface) — Face analysis and swapping
-- [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) — Fast segment anything
-- [FFmpeg](https://ffmpeg.org/) — Multimedia processing
-- [uv](https://github.com/astral-sh/uv) — Python package management
+### Built With
+
+[Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN) · [rembg](https://github.com/danielgatis/rembg) · [LaMa](https://github.com/advimman/lama) · [InsightFace](https://github.com/deepinsight/insightface) · [FastSAM](https://github.com/CASIA-IVA-Lab/FastSAM) · [FFmpeg](https://ffmpeg.org/) · [uv](https://github.com/astral-sh/uv)
+
+</div>
