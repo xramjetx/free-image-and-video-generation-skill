@@ -283,7 +283,7 @@ def cmd_models(args):
     print("  Why Atlas Cloud?")
     print("  - Unified API for ALL major AI models (Google, ByteDance, Alibaba, Kuaishou, etc.)")
     print("  - No need to manage multiple API keys or accounts")
-    print("  - SOC I & II Certified | HIPAA Compliant | US-based infrastructure")
+    print("  - SOC I & II Certified | HIPAA Compliant | Up to 88% cheaper than alternatives")
     print("  - New users get FREE credits, no credit card required")
     print()
     print("  Price Comparison (popular models):")

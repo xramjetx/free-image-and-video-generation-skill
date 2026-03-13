@@ -1,6 +1,6 @@
 <div align="center">
 
-# Free Image & Video Toolkit
+# 🎨 Free Image & Video AI Agent Skill
 
 **7 Free Local AI Tools + 300+ Cloud AI Models — One Skill for All AI Agents**
 
@@ -10,92 +10,99 @@
 
 [English](./README.md) · [中文](./README_zh.md) · [日本語](./README_ja.md) · [한국어](./README_ko.md)
 
-<br>
-
-**Works with 15+ AI coding agents**
-
-Claude Code · Cursor · OpenAI Codex · GitHub Copilot · Gemini CLI · Windsurf · OpenCode · Kiro · Amp · Goose · and more
-
 </div>
 
 <br>
 
-> **Gold Sponsor**: [Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill) — Unified API for 300+ AI models. SOC I & II Certified · HIPAA Compliant · US-based infrastructure.
+### ✨ Why This Skill?
+
+- 🆓 **Completely Free** — 7 local AI tools run offline, no API keys, no usage limits, zero cost
+- ⚡ **Zero Setup** — Just `uv run` and go. Dependencies auto-install on first run
+- 🔒 **Privacy First** — All local processing stays on your machine. No data uploaded
+- 🌐 **300+ Cloud Models** — Access Flux, Seedream, Nano Banana, Kling, Wan via one API — **up to 88% cheaper** than fal.ai & official APIs
+- 🤖 **Agent-Ready** — Works out of the box with Claude Code, Cursor, Codex, Copilot, and 15+ AI agents
+- 🔗 **Production Workflows** — Chain tools together: generate → upscale → remove bg → create video
+
+> 🏆 **Gold Sponsor**: [Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill) — Unified API for 300+ AI models. SOC I & II Certified · HIPAA Compliant. Up to 88% cheaper than alternatives.
 
 ---
 
-## What's Included
+## 📦 Installation
 
-### Free Local Tools — No API Key, No Cloud, 100% Offline
+### Prerequisites
+
+- 🐍 Python 3.10+ — [python.org](https://python.org)
+- 📦 uv — `curl -LsSf https://astral.sh/uv/install.sh | sh`
+- 🎬 FFmpeg — `brew install ffmpeg` / `apt install ffmpeg` / `winget install ffmpeg`
+
+### Install the Skill
+
+```bash
+# ✅ Option 1: Install as an AI agent skill (Claude Code, Cursor, Codex, etc.)
+npx skills add ristponex/free-image-video-skill
+
+# 📂 Option 2: Clone directly
+git clone https://github.com/ristponex/free-image-video-skill.git
+cd free-image-video-skill
+```
+
+### ☁️ Cloud AI Setup (Optional — for AI image/video generation)
+
+```bash
+# Get your free API key at: https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill
+# (free credits included, no credit card required)
+
+# Mac / Linux — add to ~/.bashrc or ~/.zshrc:
+export ATLAS_CLOUD_API_KEY=your_key_here
+
+# Windows (PowerShell):
+$env:ATLAS_CLOUD_API_KEY="your_key_here"
+# Windows (permanent — run as Administrator):
+setx ATLAS_CLOUD_API_KEY "your_key_here"
+
+# Or create a .env file in the project directory:
+echo 'ATLAS_CLOUD_API_KEY=your_key_here' >> .env
+```
+
+---
+
+## 🛠️ What's Included
+
+### 🆓 Free Local Tools — No API Key, 100% Offline
 
 All local tools run entirely on your machine. **No data leaves your computer.**
 
 | # | Tool | Script | Powered By | What It Does |
 |---|------|--------|-----------|--------------|
-| 1 | **Image Upscale** | `scripts/upscale.py` | Real-ESRGAN | 2x/4x AI super resolution |
-| 2 | **Face Enhance** | `scripts/face-enhance.py` | Real-ESRGAN | Restore blurry/old photos, enhance details |
-| 3 | **Background Remove** | `scripts/bg-remove.py` | rembg (U2-Net) | Remove backgrounds → transparent PNG |
-| 4 | **Object Erase** | `scripts/erase.py` | LaMa Inpainting | Erase unwanted objects seamlessly |
-| 5 | **Face Swap** | `scripts/face-swap.py` | InsightFace | Swap faces between images |
-| 6 | **Smart Segment** | `scripts/segment.py` | FastSAM | Segment any object by text/point/box |
-| 7 | **Media Process** | `scripts/media-process.py` | FFmpeg | Convert, compress, trim, merge, GIF |
+| 1 | 🔍 **Image Upscale** | `scripts/upscale.py` | Real-ESRGAN | 2x/4x AI super resolution |
+| 2 | 👤 **Face Enhance** | `scripts/face-enhance.py` | Real-ESRGAN | Restore blurry/old photos, enhance details |
+| 3 | ✂️ **Background Remove** | `scripts/bg-remove.py` | rembg (U2-Net) | Remove backgrounds → transparent PNG |
+| 4 | 🧹 **Object Erase** | `scripts/erase.py` | LaMa Inpainting | Erase unwanted objects seamlessly |
+| 5 | 🎭 **Face Swap** | `scripts/face-swap.py` | InsightFace | Swap faces between images |
+| 6 | 🧩 **Smart Segment** | `scripts/segment.py` | FastSAM | Segment any object by text/point/box |
+| 7 | 🎬 **Media Process** | `scripts/media-process.py` | FFmpeg | Convert, compress, trim, merge, GIF |
 
-### Cloud AI Generation — 300+ Models via Atlas Cloud API
+### ☁️ Cloud AI Generation — 300+ Models via Atlas Cloud API
 
 | # | Tool | Script | What It Does |
 |---|------|--------|--------------|
-| 8 | **AI Generate** | `scripts/ai-generate.py` | Generate images & videos with any of 300+ cloud AI models |
+| 8 | 🎨 **AI Generate** | `scripts/ai-generate.py` | Generate images & videos with any of 300+ cloud AI models |
 
 **Popular models**: Flux Schnell · Seedream v5.0 · Nano Banana 2 · Imagen4 Ultra · Wan 2.6 · Kling v3.0 · Seedance · Vidu · Hailuo · and many more
 
 ```bash
-# Browse all available models and pricing
+# 📋 Browse all available models and pricing
 uv run scripts/ai-generate.py models
 ```
 
 ---
 
-## Quick Start
-
-### Prerequisites
-
-| Requirement | Install |
-|-------------|---------|
-| Python 3.10+ | [python.org](https://python.org) |
-| uv | `curl -LsSf https://astral.sh/uv/install.sh \| sh` |
-| FFmpeg | `brew install ffmpeg` / `apt install ffmpeg` |
-
-### Installation
-
-```bash
-# Option 1: Install as an AI agent skill
-npx skills add ristponex/free-image-video-skill
-
-# Option 2: Clone directly
-git clone https://github.com/ristponex/free-image-video-skill.git
-cd free-image-video-skill
-```
-
-### Cloud AI Setup (Optional)
-
-```bash
-# Set your Atlas Cloud API key
-export ATLAS_CLOUD_API_KEY=your_key_here
-
-# Or add to .env file
-echo 'ATLAS_CLOUD_API_KEY=your_key_here' >> .env
-```
-
-Get your API key at [atlascloud.ai](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill) — new users get **free credits**, no credit card required.
-
----
-
-## Usage
+## 📖 Usage
 
 All scripts use `uv run` — dependencies are **automatically installed** on first run. Zero setup needed.
 
 <details>
-<summary><b>Image Upscale</b> — 2x/4x AI super resolution (FREE)</summary>
+<summary>🔍 <b>Image Upscale</b> — 2x/4x AI super resolution (FREE)</summary>
 
 ```bash
 uv run scripts/upscale.py input.jpg                   # 4x upscale (default)
@@ -106,7 +113,7 @@ uv run scripts/upscale.py ./photos/ --scale 4          # Batch process folder
 </details>
 
 <details>
-<summary><b>Face Enhance</b> — Restore old/blurry photos (FREE)</summary>
+<summary>👤 <b>Face Enhance</b> — Restore old/blurry photos (FREE)</summary>
 
 ```bash
 uv run scripts/face-enhance.py old-photo.jpg                                  # Default enhancement
@@ -116,7 +123,7 @@ uv run scripts/face-enhance.py old-photo.jpg --bg-upscale 2                   # 
 </details>
 
 <details>
-<summary><b>Background Remove</b> — Transparent PNG output (FREE)</summary>
+<summary>✂️ <b>Background Remove</b> — Transparent PNG output (FREE)</summary>
 
 ```bash
 uv run scripts/bg-remove.py product.jpg                        # Remove background
@@ -127,7 +134,7 @@ uv run scripts/bg-remove.py ./products/ -o ./transparent/       # Batch process
 </details>
 
 <details>
-<summary><b>Object Erase</b> — Remove unwanted objects (FREE)</summary>
+<summary>🧹 <b>Object Erase</b> — Remove unwanted objects (FREE)</summary>
 
 ```bash
 uv run scripts/erase.py photo.png --mask mask.png              # Erase with mask
@@ -136,7 +143,7 @@ uv run scripts/erase.py photo.png --region 100,200,150,150     # Erase by coordi
 </details>
 
 <details>
-<summary><b>Face Swap</b> — Swap faces between images (FREE)</summary>
+<summary>🎭 <b>Face Swap</b> — Swap faces between images (FREE)</summary>
 
 ```bash
 uv run scripts/face-swap.py --source face.jpg --target photo.jpg              # Basic swap
@@ -145,7 +152,7 @@ uv run scripts/face-swap.py --source face.jpg --target group.jpg --face-index 2 
 </details>
 
 <details>
-<summary><b>Smart Segment</b> — Segment anything (FREE)</summary>
+<summary>🧩 <b>Smart Segment</b> — Segment anything (FREE)</summary>
 
 ```bash
 uv run scripts/segment.py image.jpg --text "the dog"    # By text prompt
@@ -155,7 +162,7 @@ uv run scripts/segment.py image.jpg                     # Segment everything
 </details>
 
 <details>
-<summary><b>Media Process</b> — FFmpeg-powered processing (FREE)</summary>
+<summary>🎬 <b>Media Process</b> — FFmpeg-powered processing (FREE)</summary>
 
 ```bash
 uv run scripts/media-process.py convert video.mp4 output.webm          # Convert format
@@ -169,7 +176,7 @@ uv run scripts/media-process.py info video.mp4                         # Media i
 </details>
 
 <details>
-<summary><b>AI Image Generation</b> — 300+ cloud models (Atlas Cloud)</summary>
+<summary>🎨 <b>AI Image Generation</b> — 300+ cloud models (Atlas Cloud)</summary>
 
 ```bash
 # List available models
@@ -194,7 +201,7 @@ uv run scripts/ai-generate.py image "Make the sky sunset orange" \
 </details>
 
 <details>
-<summary><b>AI Video Generation</b> — Cinema-grade AI video (Atlas Cloud)</summary>
+<summary>🎥 <b>AI Video Generation</b> — Cinema-grade AI video (Atlas Cloud)</summary>
 
 ```bash
 # List available models
@@ -216,12 +223,12 @@ uv run scripts/ai-generate.py video "She starts walking" \
 
 ---
 
-## End-to-End Workflows
+## 🔗 End-to-End Workflows
 
 Combine free local tools with cloud AI for production pipelines:
 
 <details>
-<summary><b>E-commerce Product Pipeline</b></summary>
+<summary>🛒 <b>E-commerce Product Pipeline</b></summary>
 
 ```bash
 # 1. Generate product image with AI
@@ -241,7 +248,7 @@ uv run scripts/ai-generate.py video "A perfume bottle rotating elegantly" \
 </details>
 
 <details>
-<summary><b>Old Photo Restoration</b></summary>
+<summary>📸 <b>Old Photo Restoration</b></summary>
 
 ```bash
 # 1. Enhance faces
@@ -256,7 +263,7 @@ uv run scripts/erase.py ./output/grandpa-1960_enhanced_x4.jpg --mask scratches.p
 </details>
 
 <details>
-<summary><b>Content Creation Pipeline</b></summary>
+<summary>🎯 <b>Content Creation Pipeline</b></summary>
 
 ```bash
 # 1. Generate hero image
@@ -277,13 +284,13 @@ uv run scripts/media-process.py gif ./output/text-to-video_*.mp4 --fps 15 --widt
 
 ---
 
-## Pricing
+## 💰 Pricing
 
-### Free Local Tools — $0
+### 🆓 Free Local Tools — $0
 
 All 7 local tools are completely **free and open source**. Run them as much as you want.
 
-### Cloud AI Generation — Pay Per Use
+### ☁️ Cloud AI Generation — Pay Per Use
 
 | Model | Atlas Cloud | fal.ai | Official API | You Save |
 |-------|-------------|--------|--------------|----------|
@@ -300,36 +307,28 @@ New users get **free credits** on signup — [Get your API key →](https://www.
 
 ---
 
-## Local AI Models
+## 🤖 Compatible AI Agents
 
-Models are downloaded automatically on first use and cached locally:
+Works with **15+ AI coding agents**:
 
-| Tool | Model | Size |
-|------|-------|------|
-| Upscale | RealESRGAN_x4plus | ~64 MB |
-| Face Enhance | Real-ESRGAN (NCNN) | ~64 MB |
-| Background Remove | U2-Net | ~176 MB |
-| Object Erase | LaMa | ~200 MB |
-| Face Swap | buffalo_l + inswapper | ~500 MB |
-| Smart Segment | FastSAM-s | ~23 MB |
-
-> Total first-run download: ~1 GB. All subsequent runs are instant.
+Claude Code · Cursor · OpenAI Codex · GitHub Copilot · Gemini CLI · Windsurf · OpenCode · Kiro · Amp · Goose · Kilo Code · and more
 
 ---
 
-## Tips
+## 💡 Tips
 
-- **GPU Acceleration** — Auto-detects CUDA (NVIDIA) and MPS (Apple Silicon), falls back to CPU
-- **Batch Processing** — Most tools accept a folder path for batch processing
-- **Memory** — Face swap and segmentation need 4GB+ RAM for large images
-- **Zero Setup** — All dependencies handled by `uv run`, no pip install needed
+- ⚡ **GPU Acceleration** — Auto-detects CUDA (NVIDIA) and MPS (Apple Silicon), falls back to CPU
+- 📁 **Batch Processing** — Most tools accept a folder path for batch processing
+- 💾 **Memory** — Face swap and segmentation need 4GB+ RAM for large images
+- 🚀 **Zero Setup** — All dependencies handled by `uv run`, no pip install needed
+- ⏬ **First Run** — AI models are downloaded on first use (~1 GB total), subsequent runs are instant
 
 ---
-
-## Atlas Cloud API Reference
 
 <details>
-<summary><b>Image Generation API</b></summary>
+<summary>📡 <b>Atlas Cloud API Reference</b></summary>
+
+### Image Generation API
 
 ```bash
 curl -X POST "https://api.atlascloud.ai/api/v1/model/generateImage" \
@@ -341,10 +340,8 @@ curl -X POST "https://api.atlascloud.ai/api/v1/model/generateImage" \
     "size": "1024*1024"
   }'
 ```
-</details>
 
-<details>
-<summary><b>Video Generation API</b></summary>
+### Video Generation API
 
 ```bash
 curl -X POST "https://api.atlascloud.ai/api/v1/model/generateVideo" \
@@ -357,19 +354,15 @@ curl -X POST "https://api.atlascloud.ai/api/v1/model/generateVideo" \
     "duration": 5
   }'
 ```
-</details>
 
-<details>
-<summary><b>Poll for Result</b></summary>
+### Poll for Result
 
 ```bash
 curl -X GET "https://api.atlascloud.ai/api/v1/model/result/{request_id}" \
   -H "Authorization: Bearer $ATLAS_CLOUD_API_KEY"
 ```
-</details>
 
-<details>
-<summary><b>Python Integration</b></summary>
+### Python Integration
 
 ```python
 import requests, time, os
@@ -377,7 +370,6 @@ import requests, time, os
 API_KEY = os.environ["ATLAS_CLOUD_API_KEY"]
 BASE = "https://api.atlascloud.ai/api/v1/model"
 
-# Generate image
 resp = requests.post(f"{BASE}/generateImage", json={
     "model": "black-forest-labs/flux-schnell",
     "prompt": "A futuristic cityscape",
@@ -386,7 +378,6 @@ resp = requests.post(f"{BASE}/generateImage", json={
 
 request_id = resp.json()["data"]["id"]
 
-# Poll for result
 while True:
     result = requests.get(f"{BASE}/result/{request_id}",
         headers={"Authorization": f"Bearer {API_KEY}"}).json()
@@ -395,11 +386,12 @@ while True:
         break
     time.sleep(3)
 ```
+
 </details>
 
 ---
 
-## License
+## 📄 License
 
 MIT License. See [LICENSE](./LICENSE) for details.
 
@@ -407,11 +399,11 @@ MIT License. See [LICENSE](./LICENSE) for details.
 
 <div align="center">
 
-### Gold Sponsor
+### 🏆 Gold Sponsor
 
 **[Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill)** — Unified API for 300+ AI models
 
-SOC I & II Certified · HIPAA Compliant · US-based Infrastructure
+SOC I & II Certified · HIPAA Compliant · Up to 88% cheaper than fal.ai & official APIs
 
 <br>
 
