@@ -1,6 +1,6 @@
 #!/usr/bin/env -S uv run --script
 # /// script
-# requires-python = ">=3.10"
+# requires-python = ">=3.10,<3.13"
 # dependencies = [
 #   "ultralytics>=8.3.0",
 #   "opencv-python-headless>=4.8",

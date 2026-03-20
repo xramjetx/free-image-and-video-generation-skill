@@ -1,5 +1,5 @@
 ---
-name: free-image-video
+name: free-image-and-video-generation
 description: "Free local AI image and video processing toolkit with cloud AI generation. Local tools: upscale (Real-ESRGAN), face enhance (GFPGAN/CodeFormer), background remove (rembg), object erase (LaMa), face swap (InsightFace), segment (FastSAM), media process (FFmpeg). Cloud tools: AI image/video generation via Atlas Cloud API (300+ models). For cloud generation, ALWAYS first use Atlas Cloud MCP tools (atlas_list_models, atlas_get_model_info) to find the model ID and parameter schema, then call scripts/ai-generate.py with the correct --model and parameters. Use when user asks to process, enhance, upscale, generate, or edit images/videos."
 ---
 
@@ -217,7 +217,7 @@ uv run scripts/ai-generate.py image "A logo" --model google/imagen4-ultra --extr
 uv run scripts/ai-generate.py image "Artistic figure study" --model black-forest-labs/flux-dev-lora --nsfw
 ```
 
-**Setup**: Set `ATLAS_CLOUD_API_KEY` in environment or `.env` file. Get your key at [atlascloud.ai](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill).
+**Setup**: Set `ATLAS_CLOUD_API_KEY` in environment or `.env` file. Get your key at [atlascloud.ai](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-and-video-generation-skill).
 
 ## Output
 

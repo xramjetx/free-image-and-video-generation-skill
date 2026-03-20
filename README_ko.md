@@ -5,7 +5,7 @@
 **7개 무료 로컬 AI 도구 + 300개 이상의 클라우드 AI 모델 — 모든 AI 에이전트를 위한 하나의 스킬**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
+[![Python 3.10-3.12](https://img.shields.io/badge/Python-3.10--3.12-blue.svg)](https://python.org)
 [![uv](https://img.shields.io/badge/uv-package%20manager-blueviolet)](https://docs.astral.sh/uv/)
 
 [English](./README.md) · [中文](./README_zh.md) · [日本語](./README_ja.md) · [한국어](./README_ko.md)
@@ -23,7 +23,7 @@
 - 🤖 **에이전트 지원** — Claude Code, Cursor, Codex, Copilot 등 15+ AI 에이전트에서 바로 사용
 - 🔗 **프로덕션 워크플로우** — 도구 연결: 생성 → 업스케일 → 배경 제거 → 비디오 생성
 
-> 🏆 **골드 스폰서**: [Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill) — 300+ AI 모델 통합 API. SOC I & II 인증 · HIPAA 준수. fal.ai 및 공식 API 대비 최대 88% 저렴.
+> 🏆 **골드 스폰서**: [Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-and-video-generation-skill) — 300+ AI 모델 통합 API. SOC I & II 인증 · HIPAA 준수. fal.ai 및 공식 API 대비 최대 88% 저렴.
 
 ---
 
@@ -31,7 +31,7 @@
 
 ### 필수 조건
 
-- 🐍 Python 3.10+ — [python.org](https://python.org)
+- 🐍 Python 3.10 - 3.12 — [python.org](https://python.org) (일부 종속성이 3.13 미지원, `uv`가 올바른 버전을 자동 관리)
 - 📦 uv — `curl -LsSf https://astral.sh/uv/install.sh | sh`
 - 🎬 FFmpeg — `brew install ffmpeg` / `apt install ffmpeg` / `winget install ffmpeg`
 
@@ -39,17 +39,17 @@
 
 ```bash
 # ✅ 방법 1: AI 에이전트 스킬로 설치 (Claude Code, Cursor, Codex 등)
-npx skills add ristponex/free-image-video-skill
+npx skills add ristponex/free-image-and-video-generation-skill
 
 # 📂 방법 2: 직접 클론
-git clone https://github.com/ristponex/free-image-video-skill.git
-cd free-image-video-skill
+git clone https://github.com/ristponex/free-image-and-video-generation-skill.git
+cd free-image-and-video-generation-skill
 ```
 
 ### ☁️ 클라우드 AI 설정 (선택 사항 — AI 이미지/비디오 생성용)
 
 ```bash
-# https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill 에서 API 키 받기
+# https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-and-video-generation-skill 에서 API 키 받기
 # (무료 크레딧 제공, 신용카드 불필요)
 
 # Mac / Linux — ~/.bashrc 또는 ~/.zshrc에 추가:
@@ -218,7 +218,7 @@ uv run scripts/ai-generate.py video "Drone shot over cyberpunk city at night" \
 | Wan 2.6 (5초) | **$0.070**/5초 | $0.50/5초 | N/A | **86%** |
 | Kling v3.0 Pro (5초) | **$0.204**/5초 | N/A | $0.70/5초 | **71%** |
 
-신규 사용자 **무료 크레딧** 제공 — [API 키 받기 →](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill)
+신규 사용자 **무료 크레딧** 제공 — [API 키 받기 →](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-and-video-generation-skill)
 
 ---
 
@@ -232,7 +232,7 @@ MIT License. 자세한 내용은 [LICENSE](./LICENSE)를 참조하세요.
 
 ### 🏆 골드 스폰서
 
-**[Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill)** — 300+ AI 모델 통합 API
+**[Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-and-video-generation-skill)** — 300+ AI 모델 통합 API
 
 SOC I & II 인증 · HIPAA 준수 · fal.ai 및 공식 API 대비 최대 88% 저렴
 

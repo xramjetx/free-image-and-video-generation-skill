@@ -5,7 +5,7 @@
 **7 个免费本地 AI 工具 + 300+ 云端 AI 模型 — 一个技能适配所有 AI Agent**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
+[![Python 3.10-3.12](https://img.shields.io/badge/Python-3.10--3.12-blue.svg)](https://python.org)
 [![uv](https://img.shields.io/badge/uv-package%20manager-blueviolet)](https://docs.astral.sh/uv/)
 
 [English](./README.md) · [中文](./README_zh.md) · [日本語](./README_ja.md) · [한국어](./README_ko.md)
@@ -23,7 +23,7 @@
 - 🤖 **AI Agent 就绪** — 开箱即用，兼容 Claude Code、Cursor、Codex、Copilot 等 15+ AI 编程助手
 - 🔗 **生产级工作流** — 串联多个工具：生成 → 超分 → 去背景 → 生成视频
 
-> 🏆 **金牌赞助商**：[Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill) — 300+ AI 模型统一 API。SOC I & II 认证 · HIPAA 合规。比 fal.ai 和官方 API 最高便宜 88%。
+> 🏆 **金牌赞助商**：[Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-and-video-generation-skill) — 300+ AI 模型统一 API。SOC I & II 认证 · HIPAA 合规。比 fal.ai 和官方 API 最高便宜 88%。
 
 ---
 
@@ -31,7 +31,7 @@
 
 ### 环境要求
 
-- 🐍 Python 3.10+ — [python.org](https://python.org)
+- 🐍 Python 3.10 - 3.12 — [python.org](https://python.org)（部分依赖暂不支持 3.13，`uv` 会自动管理正确版本）
 - 📦 uv — `curl -LsSf https://astral.sh/uv/install.sh | sh`
 - 🎬 FFmpeg — `brew install ffmpeg` / `apt install ffmpeg` / `winget install ffmpeg`
 
@@ -39,17 +39,17 @@
 
 ```bash
 # ✅ 方式 1：作为 AI Agent 技能安装（Claude Code、Cursor、Codex 等）
-npx skills add ristponex/free-image-video-skill
+npx skills add ristponex/free-image-and-video-generation-skill
 
 # 📂 方式 2：直接克隆
-git clone https://github.com/ristponex/free-image-video-skill.git
-cd free-image-video-skill
+git clone https://github.com/ristponex/free-image-and-video-generation-skill.git
+cd free-image-and-video-generation-skill
 ```
 
 ### ☁️ 云端 AI 配置（可选 — 用于 AI 图片/视频生成）
 
 ```bash
-# 在 https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill 获取免费 API Key
+# 在 https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-and-video-generation-skill 获取免费 API Key
 # （赠送免费额度，无需信用卡）
 
 # Mac / Linux — 添加到 ~/.bashrc 或 ~/.zshrc：
@@ -227,7 +227,7 @@ uv run scripts/ai-generate.py video "Drone shot over cyberpunk city at night" \
 
 > 显示的是当前促销的基础价格。最终价格可能因分辨率、时长等因素有所不同。
 
-新用户注册即送**免费额度** — [获取 API Key →](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill)
+新用户注册即送**免费额度** — [获取 API Key →](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-and-video-generation-skill)
 
 ---
 
@@ -241,7 +241,7 @@ MIT License. 详见 [LICENSE](./LICENSE)。
 
 ### 🏆 金牌赞助商
 
-**[Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill)** — 300+ AI 模型统一 API
+**[Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-and-video-generation-skill)** — 300+ AI 模型统一 API
 
 SOC I & II 认证 · HIPAA 合规 · 比 fal.ai 和官方 API 最高便宜 88%
 

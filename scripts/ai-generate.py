@@ -47,7 +47,7 @@ def get_api_key():
         print("  1. Environment: export ATLAS_CLOUD_API_KEY=your_key")
         print("  2. .env file:   echo 'ATLAS_CLOUD_API_KEY=your_key' >> .env")
         print()
-        print("Get your free API key: https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill")
+        print("Get your free API key: https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-and-video-generation-skill")
         print("New users get free credits, no credit card required")
         sys.exit(1)
     return key
@@ -318,14 +318,14 @@ def cmd_models(args):
             print(f"    {model_id:<55} {display_name:<40} {discount_str}")
 
     print(f"\n  Total: {len(models)} image/video models available")
-    print(f"\n  Get API Key: https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill")
+    print(f"\n  Get API Key: https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-and-video-generation-skill")
     print(f"  New users get FREE credits, no credit card required\n")
 
 
 def main():
     parser = argparse.ArgumentParser(
         description="Atlas Cloud AI Generation - 300+ Models, Unified API",
-        epilog="Get API Key: https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill"
+        epilog="Get API Key: https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-and-video-generation-skill"
     )
     subparsers = parser.add_subparsers(dest="command", help="Command")
 
@@ -377,7 +377,7 @@ def main():
         print('  uv run scripts/ai-generate.py image "A cat" --model black-forest-labs/flux-schnell')
         print('  uv run scripts/ai-generate.py video "Sunset" --model alibaba/wan-2.6/text-to-video')
         print()
-        print("Get API Key: https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill")
+        print("Get API Key: https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-and-video-generation-skill")
         sys.exit(0)
 
     commands = {"image": cmd_image, "video": cmd_video, "models": cmd_models}

@@ -5,7 +5,7 @@
 **7 Free Local AI Tools + 300+ Cloud AI Models — One Skill for All AI Agents**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
+[![Python 3.10-3.12](https://img.shields.io/badge/Python-3.10--3.12-blue.svg)](https://python.org)
 [![uv](https://img.shields.io/badge/uv-package%20manager-blueviolet)](https://docs.astral.sh/uv/)
 
 [English](./README.md) · [中文](./README_zh.md) · [日本語](./README_ja.md) · [한국어](./README_ko.md)
@@ -23,7 +23,7 @@
 - 🤖 **Agent-Ready** — Works out of the box with Claude Code, Cursor, Codex, Copilot, and 15+ AI agents
 - 🔗 **Production Workflows** — Chain tools together: generate → upscale → remove bg → create video
 
-> 🏆 **Gold Sponsor**: [Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill) — Unified API for 300+ AI models. SOC I & II Certified · HIPAA Compliant. Up to 88% cheaper than alternatives.
+> 🏆 **Gold Sponsor**: [Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-and-video-generation-skill) — Unified API for 300+ AI models. SOC I & II Certified · HIPAA Compliant. Up to 88% cheaper than alternatives.
 
 ---
 
@@ -31,7 +31,7 @@
 
 ### Prerequisites
 
-- 🐍 Python 3.10+ — [python.org](https://python.org)
+- 🐍 Python 3.10 - 3.12 — [python.org](https://python.org) (3.13 not yet supported by some dependencies; `uv` will auto-manage the correct version)
 - 📦 uv — `curl -LsSf https://astral.sh/uv/install.sh | sh`
 - 🎬 FFmpeg — `brew install ffmpeg` / `apt install ffmpeg` / `winget install ffmpeg`
 
@@ -39,17 +39,17 @@
 
 ```bash
 # ✅ Option 1: Install as an AI agent skill (Claude Code, Cursor, Codex, etc.)
-npx skills add ristponex/free-image-video-skill
+npx skills add ristponex/free-image-and-video-generation-skill
 
 # 📂 Option 2: Clone directly
-git clone https://github.com/ristponex/free-image-video-skill.git
-cd free-image-video-skill
+git clone https://github.com/ristponex/free-image-and-video-generation-skill.git
+cd free-image-and-video-generation-skill
 ```
 
 ### ☁️ Cloud AI Setup (Optional — for AI image/video generation)
 
 ```bash
-# Get your free API key at: https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill
+# Get your free API key at: https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-and-video-generation-skill
 # (free credits included, no credit card required)
 
 # Mac / Linux — add to ~/.bashrc or ~/.zshrc:
@@ -303,7 +303,7 @@ All 7 local tools are completely **free and open source**. Run them as much as y
 
 > Prices shown are base prices with current promotions. Final price may vary by resolution, duration, etc.
 
-New users get **free credits** on signup — [Get your API key →](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill)
+New users get **free credits** on signup — [Get your API key →](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-and-video-generation-skill)
 
 ---
 
@@ -401,7 +401,7 @@ MIT License. See [LICENSE](./LICENSE) for details.
 
 ### 🏆 Gold Sponsor
 
-**[Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill)** — Unified API for 300+ AI models
+**[Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-and-video-generation-skill)** — Unified API for 300+ AI models
 
 SOC I & II Certified · HIPAA Compliant · Up to 88% cheaper than fal.ai & official APIs
 

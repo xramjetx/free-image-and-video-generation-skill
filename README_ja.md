@@ -5,7 +5,7 @@
 **7つの無料ローカルAIツール + 300以上のクラウドAIモデル — すべてのAIエージェントに対応**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
+[![Python 3.10-3.12](https://img.shields.io/badge/Python-3.10--3.12-blue.svg)](https://python.org)
 [![uv](https://img.shields.io/badge/uv-package%20manager-blueviolet)](https://docs.astral.sh/uv/)
 
 [English](./README.md) · [中文](./README_zh.md) · [日本語](./README_ja.md) · [한국어](./README_ko.md)
@@ -23,7 +23,7 @@
 - 🤖 **エージェント対応** — Claude Code、Cursor、Codex、Copilotなど15以上のAIエージェントですぐに使える
 - 🔗 **本番ワークフロー** — ツールを連携：生成 → アップスケール → 背景除去 → 動画作成
 
-> 🏆 **ゴールドスポンサー**: [Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill) — 300以上のAIモデル統合API。SOC I & II認証 · HIPAA準拠。fal.aiや公式APIより最大88%お得。
+> 🏆 **ゴールドスポンサー**: [Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-and-video-generation-skill) — 300以上のAIモデル統合API。SOC I & II認証 · HIPAA準拠。fal.aiや公式APIより最大88%お得。
 
 ---
 
@@ -31,7 +31,7 @@
 
 ### 前提条件
 
-- 🐍 Python 3.10+ — [python.org](https://python.org)
+- 🐍 Python 3.10 - 3.12 — [python.org](https://python.org)（一部の依存関係が3.13未対応、`uv`が適切なバージョンを自動管理）
 - 📦 uv — `curl -LsSf https://astral.sh/uv/install.sh | sh`
 - 🎬 FFmpeg — `brew install ffmpeg` / `apt install ffmpeg` / `winget install ffmpeg`
 
@@ -39,17 +39,17 @@
 
 ```bash
 # ✅ 方法1: AIエージェントスキルとしてインストール（Claude Code、Cursor、Codex等）
-npx skills add ristponex/free-image-video-skill
+npx skills add ristponex/free-image-and-video-generation-skill
 
 # 📂 方法2: 直接クローン
-git clone https://github.com/ristponex/free-image-video-skill.git
-cd free-image-video-skill
+git clone https://github.com/ristponex/free-image-and-video-generation-skill.git
+cd free-image-and-video-generation-skill
 ```
 
 ### ☁️ クラウドAI設定（任意 — AI画像/動画生成用）
 
 ```bash
-# https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill でAPIキーを取得
+# https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-and-video-generation-skill でAPIキーを取得
 # （無料クレジット付き、クレジットカード不要）
 
 # Mac / Linux — ~/.bashrc または ~/.zshrc に追加：
@@ -218,7 +218,7 @@ uv run scripts/ai-generate.py video "Drone shot over cyberpunk city at night" \
 | Wan 2.6 (5秒) | **$0.070**/5秒 | $0.50/5秒 | N/A | **86%** |
 | Kling v3.0 Pro (5秒) | **$0.204**/5秒 | N/A | $0.70/5秒 | **71%** |
 
-新規ユーザーは**無料クレジット**付き — [APIキーを取得 →](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill)
+新規ユーザーは**無料クレジット**付き — [APIキーを取得 →](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-and-video-generation-skill)
 
 ---
 
@@ -232,7 +232,7 @@ MIT License. 詳細は [LICENSE](./LICENSE) をご覧ください。
 
 ### 🏆 ゴールドスポンサー
 
-**[Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-video-skill)** — 300以上のAIモデル統合API
+**[Atlas Cloud](https://www.atlascloud.ai?utm_source=github&utm_campaign=free-image-and-video-generation-skill)** — 300以上のAIモデル統合API
 
 SOC I & II認証 · HIPAA準拠 · fal.aiや公式APIより最大88%お得
 
